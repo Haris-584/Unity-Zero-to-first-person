@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
-
 public class CheckMyVision : MonoBehaviour
 {
 
@@ -50,9 +49,13 @@ public class CheckMyVision : MonoBehaviour
 
         //let us check if within field of view
         if (angle <= fieldOfVision)
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
 
     }
 
@@ -68,14 +71,9 @@ public class CheckMyVision : MonoBehaviour
             {
                 return true;
             }
-
-
         }
         return false;
-
-
     }
-
 
     void UpdateSight()
     {
@@ -105,42 +103,5 @@ public class CheckMyVision : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
         targetInSight = false;
-    }
-
-   
-    // How sensitive we are about vision / line of sight?
-    
-    // Variable to check sensitivity
-   
-    //Are we able to see the target right now?
-   
-    // Field of vision
-   
-    //we need a reference to our target here as well
-   
-    //Reference to our eyes - yet to add 
-   
-    //My transform component
-   
-    //My sphere collider
-   
-    //Last known sighting of object?
-    
-    //awake method
-        //get angle btw forward and view direction
-   
-        //let us check if within field of view
-   
-    //We need a function to check line of sight
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

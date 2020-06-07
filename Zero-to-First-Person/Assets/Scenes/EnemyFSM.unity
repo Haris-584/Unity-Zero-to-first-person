@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &196735009
 PrefabInstance:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 445208508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27286e358ec23a44fbf28a4b25d100f9, type: 3}
+  m_Script: {fileID: 11500000, guid: a59d6cf2d4e4e984f86fd722bfc2b09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 44749309}
@@ -374,14 +374,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 445208508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1a742b827362e48bc492447fd4797e, type: 3}
+  m_Script: {fileID: 11500000, guid: c4965405df041f0488a813e8dbd2061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0
+  sensitivity: 1
   targetInSight: 0
   fieldOfVision: 90
   myEyes: {fileID: 765592297}
-  npcTransform: {fileID: 0}
+  npcTransform: {fileID: 445208515}
   lastKnownSighting: {x: 0, y: 0, z: 0}
 --- !u!135 &445208513
 SphereCollider:
@@ -405,10 +405,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 445208508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5b4297dffc4bd488a09da8fe4fa81e, type: 3}
+  m_Script: {fileID: 11500000, guid: 15db7f36a2062444190abc38b605863b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  playerTransform: {fileID: 0}
   maxDamage: 10
 --- !u!4 &445208515 stripped
 Transform:
@@ -494,7 +495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &885908496
 GameObject:
@@ -544,7 +545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020374782
 GameObject:
@@ -594,7 +595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133702256
 GameObject:
@@ -637,40 +638,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133702256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 939ac316eb753cf4193113f5ab4e8547, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f4a955b6f206a4fbb34e3cfeb01d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 100
---- !u!1 &1361467407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1361467408}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1361467408
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361467407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1506390005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -686,10 +657,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506390005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 939ac316eb753cf4193113f5ab4e8547, type: 3}
+  m_Script: {fileID: 11500000, guid: a59d6cf2d4e4e984f86fd722bfc2b09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
+  destination: {fileID: 44749309}
+--- !u!195 &1506390011
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506390005}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &1672534368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
