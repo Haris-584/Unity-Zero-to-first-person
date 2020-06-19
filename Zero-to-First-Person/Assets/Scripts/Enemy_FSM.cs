@@ -38,7 +38,7 @@ public class Enemy_FSM : MonoBehaviour
 
     private CheckMyVision checkMyVision;
     private NavMeshAgent agent = null;
-    //public Transform playerTransform = null;
+    public Transform playerTransform = null;
     private Transform patrolDestination = null;
     private Health playerHealth = null;
     public float maxDamage = 10f;
